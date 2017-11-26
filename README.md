@@ -1,9 +1,13 @@
 # Realistic Torches
 
-Realistic Torches is a Minecraft mod designed to add difficulty to the early game. The primary feature of this mod causes torches to burn out after a configurable amount of time, encouraging players to move toward more permanent light sources early on.
-
-[Downloads and more information on Curse](https://minecraft.curseforge.com/projects/realistic-torches)
+This is an unofficial partial update of MattCzyr's Realistic Torches mod to 1.12.2, used under [Creative Commons Attribution-NonCommercial ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+Some features and items have been removed:
+  The dynamic lighting was removed since it was acting quite glitchy at times.
+  The glowstone-related items were removed, and the torch recipe simply requires glowstone dust instead.
 
 ## License
 
 This mod is available under the [Creative Commons Attribution-NonCommercial ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+The CurseForge page for the original mod can be found here: https://minecraft.curseforge.com/projects/realistic-torches.
+The original repository for the mod can be found here: https://github.com/MattCzyr/RealisticTorches.
