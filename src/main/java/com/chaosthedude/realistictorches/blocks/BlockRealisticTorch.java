@@ -2,12 +2,13 @@ package com.chaosthedude.realistictorches.blocks;
 
 import com.chaosthedude.realistictorches.config.ConfigHandler;
 import com.chaosthedude.realistictorches.items.RealisticTorchesItems;
-
 import net.minecraft.block.BlockTorch;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -75,4 +76,8 @@ public class BlockRealisticTorch extends BlockTorch {
 		return ConfigHandler.torchBurnout > 0;
 	}
 
+	public Item createItemBlock() {
+		return new ItemBlock(this).setRegistryName(getRegistryName());
+	}
+	
 }

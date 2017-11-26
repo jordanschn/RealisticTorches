@@ -23,7 +23,7 @@ public class ConfigHandler {
 	public static boolean oreDictionaryEnabled = false;
 	public static boolean noRelightEnabled = false;
 	public static boolean registerLightSourceBlocks = true;
-	public static boolean matchboxCreatesFire = false;
+	public static boolean matchboxCreatesFire = true;
 	public static boolean generateLitTorches = true;
 	public static boolean vanillaTorchDropsUnlit = false;
 

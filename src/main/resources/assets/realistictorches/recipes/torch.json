@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"G",
+		"T"
+	],
+	"key": {
+		"G": {
+			"item": "minecraft:glowstone_dust"
+		},
+		"T": {
+			"item": "realistictorches:torch_unlit"
+		}
+	},
+	"result": {
+		"item": "minecraft:torch"
+	}
+}

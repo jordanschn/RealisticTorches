@@ -29,6 +29,7 @@ public class ItemMatchbox extends Item {
 	public ItemMatchbox() {
 		super();
 		setUnlocalizedName(RealisticTorches.MODID + "." + NAME);
+		setRegistryName(NAME);
 		setMaxStackSize(1);
 		setMaxDamage(ConfigHandler.matchboxDurability - 1);
 		setCreativeTab(CreativeTabs.TOOLS);
@@ -71,13 +72,18 @@ public class ItemMatchbox extends Item {
 
 		return stack;
 	}
+	
+	public void registerItemModel() {
+		RealisticTorches.proxy.registerItemRenderer(this, 0, NAME);
+	}
 
+	/*
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean par4) {
 		if (GuiScreen.isShiftKeyDown()) {
 			info.add(ChatFormatting.ITALIC + "It's lit");
 		}
-	}
+	}*/
 
 }

@@ -8,28 +8,22 @@ import com.chaosthedude.realistictorches.RealisticTorches;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class RealisticTorchesItems {
 
-	public static final List<Item> REGISTRY = new ArrayList<Item>();
-
-	public static ItemMatchbox matchbox;
-	public static Item glowstoneCrystal;
-	public static Item glowstonePaste;
-
-	public static void register() {
-		matchbox = registerItem(new ItemMatchbox(), ItemMatchbox.NAME);
-		glowstoneCrystal = registerItem(new Item().setUnlocalizedName(RealisticTorches.MODID + ".glowstone_crystal").setCreativeTab(CreativeTabs.MATERIALS), "glowstone_crystal");
-		glowstonePaste = registerItem(new Item().setUnlocalizedName(RealisticTorches.MODID + ".glowstone_paste").setCreativeTab(CreativeTabs.MATERIALS), "glowstone_paste");
+	public static ItemMatchbox matchbox = new ItemMatchbox();
+	public static void register(IForgeRegistry<Item> registry) {
+		registry.registerAll(
+				matchbox
+		);		
+		//glowstoneCrystal = registerItem(new Item().setUnlocalizedName(RealisticTorches.MODID + ".glowstone_crystal").setCreativeTab(CreativeTabs.MATERIALS), "glowstone_crystal");
+		//glowstonePaste = registerItem(new Item().setUnlocalizedName(RealisticTorches.MODID + ".glowstone_paste").setCreativeTab(CreativeTabs.MATERIALS), "glowstone_paste");
 	}
 
-	protected static <T extends Item> T registerItem(T itemType, String name) {
-		T item = itemType;
-		item.setRegistryName(name);
-		GameRegistry.register(item);
-		REGISTRY.add(item);
-
-		return item;
+	public static void registerModels() {
+		matchbox.registerItemModel();
 	}
 
 }

@@ -25,11 +25,13 @@ public class BlockTorchSmoldering extends BlockRealisticTorch {
 
 	public BlockTorchSmoldering() {
 		setUnlocalizedName(RealisticTorches.MODID + "." + NAME);
+		setRegistryName(NAME);
 		setLightLevel(0.65F);
 		setTickRandomly(true);
 		setCreativeTab(null);
 	}
 
+	/*
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float side, float hitX, float hitY) {
 		if (player.getHeldItem(hand).getItem() == RealisticTorchesItems.glowstonePaste) {
@@ -41,7 +43,7 @@ public class BlockTorchSmoldering extends BlockRealisticTorch {
 		}
 
 		return super.onBlockActivated(world, pos, state, player, hand, facing, side, hitX, hitY);
-	}
+	}*/
 
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {

@@ -23,6 +23,7 @@ public class BlockTorchUnlit extends BlockRealisticTorch {
 
 	public BlockTorchUnlit() {
 		setUnlocalizedName(RealisticTorches.MODID + "." + NAME);
+		setRegistryName(NAME);
 		setCreativeTab(CreativeTabs.DECORATIONS);
 	}
 

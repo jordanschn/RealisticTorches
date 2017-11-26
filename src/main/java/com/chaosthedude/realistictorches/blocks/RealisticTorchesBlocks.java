@@ -3,38 +3,41 @@ package com.chaosthedude.realistictorches.blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.chaosthedude.realistictorches.blocks.te.TEMovingLightSource;
-
+import com.chaosthedude.realistictorches.RealisticTorches;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
+import net.minecraftforge.registries.IForgeRegistry;
+
 
 public class RealisticTorchesBlocks {
 
-	public static final List<Block> REGISTRY = new ArrayList<Block>();
+	//public static final List<Block> REGISTRY = new ArrayList<Block>();
 
-	public static BlockTorchUnlit torchUnlit;
-	public static BlockTorchLit torchLit;
-	public static BlockTorchSmoldering torchSmoldering;
-	public static BlockMovingLightSource movingLightSource;
+	public static BlockTorchUnlit torchUnlit = new BlockTorchUnlit();
+	public static BlockTorchLit torchLit = new BlockTorchLit();
+	public static BlockTorchSmoldering torchSmoldering = new BlockTorchSmoldering();
+	//public static BlockMovingLightSource movingLightSource = new BlockMovingLightSource();
 
-	public static void register() {
-		torchUnlit = registerBlock(new BlockTorchUnlit(), BlockTorchUnlit.NAME);
-		torchLit = registerBlock(new BlockTorchLit(), BlockTorchLit.NAME);
-		torchSmoldering = registerBlock(new BlockTorchSmoldering(), BlockTorchSmoldering.NAME);
-		movingLightSource = registerBlock(new BlockMovingLightSource(), BlockMovingLightSource.NAME);
-
-		GameRegistry.registerTileEntity(TEMovingLightSource.class, TEMovingLightSource.NAME);
+	
+	public static void register(IForgeRegistry<Block> registry) {
+		registry.registerAll(
+				torchUnlit,
+				torchLit,
+				torchSmoldering
+		);
+	}
+	
+	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
+		registry.registerAll(
+				torchUnlit.createItemBlock(),
+				torchLit.createItemBlock(),
+				torchSmoldering.createItemBlock()
+		);
 	}
 
-	protected static <T extends Block> T registerBlock(T blockType, String name) {
-		T block = blockType;
-		block.setRegistryName(name);
-		GameRegistry.register(block);
-		GameRegistry.register(new ItemBlock(block).setRegistryName(name));
-		REGISTRY.add(block);
-
-		return block;
+	public static void registerModels() {
+		RealisticTorches.proxy.registerItemRenderer(Item.getItemFromBlock(torchUnlit), 0, BlockTorchUnlit.NAME);
+		RealisticTorches.proxy.registerItemRenderer(Item.getItemFromBlock(torchLit), 0, BlockTorchLit.NAME);
+		RealisticTorches.proxy.registerItemRenderer(Item.getItemFromBlock(torchSmoldering), 0, BlockTorchSmoldering.NAME);
 	}
-
 }

@@ -24,12 +24,14 @@ public class BlockTorchLit extends BlockRealisticTorch {
 
 	public BlockTorchLit() {
 		setUnlocalizedName(RealisticTorches.MODID + "." + NAME);
+		setRegistryName(NAME);
 		setLightLevel(0.9375F);
 		setTickRandomly(true);
 		setLit(true);
 		setCreativeTab(CreativeTabs.DECORATIONS);
 	}
 
+	/*
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float side, float hitX, float hitY) {
 		if (player.getHeldItem(hand).getItem() == RealisticTorchesItems.glowstonePaste) {
@@ -41,7 +43,7 @@ public class BlockTorchLit extends BlockRealisticTorch {
 		}
 
 		return super.onBlockActivated(world, pos, state, player, hand, facing, side, hitX, hitY);
-	}
+	}*/
 
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {

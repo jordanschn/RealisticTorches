@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "torch_unlit",
+	"pattern": [
+		"C",
+		"S"
+	],
+	"key": {
+		"C": {
+			"item": "minecraft:coal",
+			"data": 0
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "realistictorches:torch_unlit",
+		"count": 4
+	}
+}
