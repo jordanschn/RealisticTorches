@@ -2,8 +2,8 @@
 
 This is an unofficial partial update of MattCzyr's Realistic Torches mod to 1.12.2, used under [Creative Commons Attribution-NonCommercial ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 Some features and items have been removed:
-  The dynamic lighting was removed since it was acting quite glitchy at times.
-  The glowstone-related items were removed, and the torch recipe simply requires glowstone dust instead.
+  -The dynamic lighting was removed since it was acting quite glitchy at times.
+  -The glowstone-related items were removed, and the torch recipe simply requires glowstone dust instead.
 
 ## License
 
