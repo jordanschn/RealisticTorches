@@ -9,6 +9,5 @@ Some features and items have been removed:
 
 This mod is available under the [Creative Commons Attribution-NonCommercial ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
-The CurseForge page for the original mod can be found here: https://minecraft.curseforge.com/projects/realistic-torches.
-
+The CurseForge page for the original mod can be found here: https://minecraft.curseforge.com/projects/realistic-torches. <br>
 The original repository for the mod can be found here: https://github.com/MattCzyr/RealisticTorches.
